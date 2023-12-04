@@ -13,7 +13,7 @@ const Portfolio = () => {
   return (
     <div id="portfolio"
       className="bg-[#060918] text-white flex flex-col items-center min-h-screen z-30 
-      border-b-[1px] border-gray-500 md:max-w-7xl"
+      border-b-[1px] border-gray-500 md:w-full"
     >
       <div className="mt-20 flex flex-col items-center justify-center pb-28">
         <h1 className="uppercase border border-blue-700 text-blue-300 bg-[#100b30] w-24 text-center rounded-xl">

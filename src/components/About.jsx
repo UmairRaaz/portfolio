@@ -12,7 +12,7 @@ const About = () => {
 
   return (
 
-      <div id="about" className="bg-[#060918] border-b-[1px] border-gray-500 text-white flex flex-col md:flex-row h-full pb-20 z-10 md:max-w-7xl">
+      <div id="about" className="bg-[#060918] border-b-[1px] border-gray-500 text-white flex flex-col md:flex-row h-full pb-20 z-10 md:w-full">
         <div className="md:w-1/2 flex mt-8 justify-center z-10">
           <div
             className="h-[300px] w-[300px] mt-16 rounded-full relative overflow-hidden z-10"

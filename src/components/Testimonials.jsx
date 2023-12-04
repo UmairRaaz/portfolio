@@ -4,7 +4,7 @@ import React from "react";
 
 const Testimonials = () => {
   return (
-    <div id="review" className="relative h-screen flex items-center justify-center flex-col py-20 md:max-w-7xl">
+    <div id="review" className="relative h-screen flex items-center justify-center flex-col py-20 md:w-full">
       <div className="bg-[#060918] h-screen  absolute top-0 left-0  -z-20 overflow-hidden text-white">
         <StarsBackground />
       </div>

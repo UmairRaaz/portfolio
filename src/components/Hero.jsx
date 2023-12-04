@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 const Hero = () => {
   return (
-    <div id="home" className="relative h-screen overflow-hidden bg-[#6919ff] text-white text-center  flex items-center justify-center flex-col z-20 md:max-w-7xl">
+    <div id="home" className="relative h-screen overflow-hidden bg-[#6919ff] text-white text-center  flex items-center justify-center flex-col z-20 md:w-full">
       <div style={{width:"100%", height:"100vh", position:"absolute"}}>
       <Image
         className="transition-transform transform hover:scale-110 "

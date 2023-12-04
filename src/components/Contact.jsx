@@ -45,7 +45,7 @@ const Contact = () => {
   return (
     <div id="contact"
       className="flex flex-col md:mt-0 md:flex-row justify-center  bg-[#060918]
-    pb-10 z-10 pt-20 px-4 md:px-10 border-b-[1px] border-gray-700 mt-60 md:max-w-7xl  "
+    pb-10 z-10 pt-20 px-4 md:px-10 border-b-[1px] border-gray-700 mt-60 md:w-full  "
     >
       <div className="md:w-1/2 p-8">
         <h1 className="uppercase border border-blue-700 text-blue-300 bg-[#100b30] w-24 text-center rounded-xl my-4">
