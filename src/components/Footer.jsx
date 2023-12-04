@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
 
         {/* Third Section - Social Media Links */}
-        <div className="flex flex-col md:flex-row items-center gap-3 md:gap-0 mt-4 md:mt-0 justify-between w-full text-gray-500">
+        <div className="flex flex-col md:flex-row items-center gap-3 md:gap-0 mt-4 md:mt-0 justify-between w-full text-gray-500 md:px-14">
           <div>© 2023 Umair Dev</div>
           <div className="flex gap-4">
             <Link target="_blank" href="https://www.upwork.com/freelancers/~01c17e54aa962b06b6" className="text-gray-500 hover:text-white mr-4">
