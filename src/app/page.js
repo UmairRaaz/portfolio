@@ -6,7 +6,7 @@ import MainPage from "@/components/MainPage"
 const page = () => {
 
   return (
-    <div className='w-screen overflow-hidden scroll-smooth'>
+    <div className='w-auto overflow-hidden scroll-smooth'>
       <MainPage />
     </div>
 

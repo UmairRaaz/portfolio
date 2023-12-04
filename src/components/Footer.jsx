@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
-    <footer className=" py-8 pt-20 text-white bg-[#060918] pb-10 z-10 px-4 md:px-0">
+    <footer className=" py-8 pt-20 text-white bg-[#060918] pb-10 z-10 px-4 md:px-0 md:max-w-7xl">
       <div className="container w-screen mx-auto flex flex-col items-center justify-between">
         {/* First Section - Your Name */}
         <div className="mb-4  border-b-[1px] border-gray-700 w-full text-center pb-4">

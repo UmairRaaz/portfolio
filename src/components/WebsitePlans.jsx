@@ -3,7 +3,7 @@ import PriceCard from "./PriceCard";
 
 const WebsitePlans = () => {
   return (
-    <div id="services" className="text-white bg-[#060918] pb-20 z-10 flex-col h-screen mt-40 md:mt-20 flex justify-center items-center">
+    <div id="services" className="text-white bg-[#060918] pb-20 z-10 flex-col h-screen mt-40 md:mt-20 flex justify-center items-center md:max-w-7xl">
       <div className="my-10 flex flex-col items-center justify-center text-center px-4 md:px-0">
         <h1 className="uppercase border border-blue-700 text-blue-300 bg-[#100b30] w-24 text-center rounded-xl">
           SERVICES
