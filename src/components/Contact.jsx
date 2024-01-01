@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaRocketchat } from "react-icons/fa6";
 import { CgMail } from "react-icons/cg";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 const Contact = () => {
+  const form = useRef();
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [msg, setmsg] = useState("");
@@ -42,12 +43,13 @@ const Contact = () => {
       error: "Message failed to send",
     });
   };
+  
   return (
     <div
       id="contact"
       className="flex flex-col md:mt-0 md:flex-row justify-center pb-10 z-10 md:pt-20 px-4 md:px-10 md:w-full"
     >
-      <div className="md:w-1/2 p-8">
+      <div className="md:w-1/2 p-8 text-center md:text-left">
         <h1 className="uppercase border border-blue-700 text-blue-300 bg-[#100b30] inline text-center rounded-full px-4 py-2">
           Contact Me
         </h1>
@@ -60,7 +62,7 @@ const Contact = () => {
         </p>
       </div>
       <div className="md:w-1/2 p-8">
-        <form className="space-y-4" onSubmit={handleFormSubmit}>
+        <form className="space-y-4" ref={form} onSubmit={handleFormSubmit}>
           <div>
             <label
               htmlFor="name"

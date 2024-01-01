@@ -21,9 +21,9 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <div className="">
+    <div className="max-w-xl overflow-hidden mt-4 fixed top-0 left-0 right-0 mx-auto z-50 backdrop-blur-md">
       <div
-        className={`desktop-nav max-w-xl fixed top-5 md:left-96 z-50 mx-auto rounded-full px-6 py-3 grid grid-cols-3 items-center text-base border border-white backdrop-blur-md text-white `}
+        className={`desktop-nav max-w-[20rem] md:max-w-xl  mx-auto rounded-full px-3 md:px-6 py-3 grid grid-cols-3 items-center text-base border border-white text-white `}
       >
         <div className="menu desktop hidden md:block">
           <ul className="flex items-center gap-4">
@@ -40,14 +40,14 @@ const Navbar = () => {
                 handlenav ? "hidden" : "block"
               }`}
             >
-              <IoClose size={30} onClick={() => sethandlenav(!handlenav)} />
+              <IoClose size={25} onClick={() => sethandlenav(!handlenav)} />
             </div>
             <div
               className={`open cursor-pointer ${
                 handlenav ? "block" : "hidden"
               }`}
             >
-              <IoMdMenu size={30} onClick={() => sethandlenav(!handlenav)} />
+              <IoMdMenu size={25} onClick={() => sethandlenav(!handlenav)} />
             </div>
           </div>
         </div>
@@ -55,13 +55,13 @@ const Navbar = () => {
           
         </div>
         <div className="button text-right">
-          <button className="rounded-full md:px-4 px-3 py-1 border">
+          <button className="rounded-full text-xs md:px-4 px-3 py-1 border">
             <Link href="#contact">Hit me Up</Link>
           </button>
         </div>
       </div>
       <div
-        className={`mobile-nav fixed left-0 top-20 z-50 h-full w-full backdrop-blur ${
+        className={`mobile-nav  z-50 h-screen backdrop-blur ${
           handlenav ? "hidden" : "block"
         }`}
       >
