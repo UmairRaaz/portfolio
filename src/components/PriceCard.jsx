@@ -1,19 +1,16 @@
 import Link from "next/link";
 import React from "react";
 
-const PriceCard = ({ title, price, features, isHighlighted }) => {
+const PriceCard = ({ title, price, features }) => {
   return (
     <div className="max-w-lg mx-auto mt-8">
       <div
-        className={`group bg-[#060918] h-72 p-6 rounded-lg shadow-md transition duration-300 transform ${
-          isHighlighted
-            ? "md:scale-125 scale-125 md:hover:scale-150"
-            : "md:hover:scale-125 scale-125 md:scale-110"
-        } border border-slate-500`}
+        className={`group bg-[#110e18] h-72 p-6 w-full mx-2 rounded-lg shadow-md transition duration-300 transform border border-slate-500`}
       >
-        <h2 className="text-2xl font-bold text-gray-300">{title}</h2>
-        <p className="mt-2 text-2xl font-semibold text-indigo-600">${price}</p>
-        <ul className="mt-4 text-gray-600">
+        <h2 className="text-2xl font-bold text -mb-4">{title}</h2>
+        <p className="mt-2 text-2xl font-semibold text-white">${price}</p>
+        <span className="text-xs">What&rsquo;s included:</span>
+        <ul className="mt-4 text-gray-300">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center">
               <span className="mr-2">
@@ -35,8 +32,8 @@ const PriceCard = ({ title, price, features, isHighlighted }) => {
             </li>
           ))}
         </ul>
-        <button className=" border border-blue-700 text-blue-300 bg-[#100b30]  text-center rounded-xl w-32 mt-10">
-          <Link href={"#contact"}>Get Started</Link>
+        <button className=" border border-blue-700 text-blue-300 bg-[#100b30]  text-center rounded-full px-2 py-2 mt-4 text-xs">
+          <Link href="#contact">Get Started</Link>
         </button>
       </div>
     </div>

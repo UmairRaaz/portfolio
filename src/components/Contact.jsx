@@ -43,15 +43,15 @@ const Contact = () => {
     });
   };
   return (
-    <div id="contact"
-      className="flex flex-col md:mt-0 md:flex-row justify-center  bg-[#060918]
-    pb-10 z-10 pt-20 px-4 md:px-10 border-b-[1px] border-gray-700 mt-60 md:w-full  "
+    <div
+      id="contact"
+      className="flex flex-col md:mt-0 md:flex-row justify-center pb-10 z-10 md:pt-20 px-4 md:px-10 md:w-full"
     >
       <div className="md:w-1/2 p-8">
-        <h1 className="uppercase border border-blue-700 text-blue-300 bg-[#100b30] w-24 text-center rounded-xl my-4">
-          Contact
+        <h1 className="uppercase border border-blue-700 text-blue-300 bg-[#100b30] inline text-center rounded-full px-4 py-2">
+          Contact Me
         </h1>
-        <p className="text-4xl font-semibold text-gray-300">
+        <p className="text-4xl font-semibold text-gray-300 mt-8">
           Got a problem to solve?
         </p>
         <p className="text-sm text-gray-500 my-4">
@@ -71,6 +71,7 @@ const Contact = () => {
             <input
               type="text"
               id="name"
+              required
               name="name"
               value={name}
               onChange={(e) => setname(e.target.value)}
@@ -88,6 +89,7 @@ const Contact = () => {
               type="email"
               id="email"
               name="email"
+              required
               value={email}
               onChange={(e) => setemail(e.target.value)}
               className="mt-1 p-2 w-full text-white  rounded-md focus:outline-none focus:border-indigo-500 bg-[#161a2c]"
@@ -103,6 +105,7 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
+              required
               value={msg}
               onChange={(e) => setmsg(e.target.value)}
               rows="4"

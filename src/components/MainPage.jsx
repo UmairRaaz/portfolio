@@ -23,7 +23,10 @@ const MainPage = () => {
       {!loading ? (
         <Loading />
       ) : (
-        <>
+        <div
+          className="max-w-[90%] md:max-w-[80%] mx-auto border-x border-gray-800"
+          style={{ backgroundColor: "rgba(9, 7, 13, .9)" }}
+        >
           <Toaster />
           <Navbar />
           <Hero />
@@ -33,7 +36,7 @@ const MainPage = () => {
           <WebsitePlans />
           <Contact />
           <Footer />
-        </>
+        </div>
       )}
     </div>
   );

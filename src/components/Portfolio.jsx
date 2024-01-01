@@ -6,23 +6,24 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
+import Link from "next/link";
 
 const Portfolio = () => {
   const [swiperRef, setSwiperRef] = useState(null);
 
   return (
-    <div id="portfolio"
-      className="bg-[#060918] text-white flex flex-col items-center min-h-screen z-30 
-      border-b-[1px] border-gray-500 md:w-full"
+    <div
+      id="portfolio"
+      className="text-white flex flex-col items-center min-h-screen z-30  border-gray-500 md:w-full overflow-hidden"
     >
-      <div className="mt-20 flex flex-col items-center justify-center pb-28">
-        <h1 className="uppercase border border-blue-700 text-blue-300 bg-[#100b30] w-24 text-center rounded-xl">
-          Work
+      <div className="mt-20 flex flex-col items-center justify-center">
+        <h1 className="uppercase border border-blue-700 text-blue-300 bg-[#100b30] inline px-4 py-2 text-center rounded-full">
+          My Work
         </h1>
-        <h1 className="text-4xl my-4 font-bold">See My Portfolio</h1>
+        <h1 className="text-4xl font-bold mt-8 mb-10 md:mb-0">See My Portfolio</h1>
 
-        <div className="w-[80vw] md:mt-5 ">
-          <div className="h-[80vh]">
+        <div className="w-[80vw] md:mt-14 ">
+          <div className="h-[50vh]">
             <Swiper
               onSwiper={setSwiperRef}
               slidesPerView={3}
@@ -49,16 +50,55 @@ const Portfolio = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <Image src={"/image1.png"} layout="fill" alt="portfolio" />
+                <Link
+                  href="https://learnfromskillex.netlify.app/"
+                  target="_blank"
+                >
+                  <Image
+                    src={"/portfolioOne.png"}
+                    layout="fill"
+                    alt="portfolio"
+                  />
+                </Link>
               </SwiperSlide>
               <SwiperSlide>
-                <Image src={"/image2.png"} layout="fill" alt="portfolio" />
+                <Link href="https://perkandpour.netlify.app/" target="_blank">
+                  <Image
+                    src={"/portfolioTwo.png"}
+                   layout="fill"
+                    alt="portfolio"
+                  />
+                </Link>
               </SwiperSlide>
               <SwiperSlide>
-                <Image src={"/image3.png"} layout="fill" alt="portfolio" />
+                <Link
+                  href="https://history-museum.netlify.app/"
+                  target="_blank"
+                >
+                  <Image
+                    src={"/portfolioThree.png"}
+                    layout="fill"
+                    alt="portfolio"
+                  />
+                </Link>
               </SwiperSlide>
               <SwiperSlide>
-                <Image src={"/image4.png"} layout="fill" alt="portfolio" />
+                <Link href="https://umairraaz.github.io/shopwise/" target="_blank">
+                <Image
+                  src={"/portfolioFour.png"}
+                  layout="fill"
+                  alt="portfolio"
+                />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link href="https://umairraaz.github.io/dentalweb/" target="_blank">
+                <Image
+                  src={"/portfolioFive.png"}
+                  layout="fill"
+                  alt="portfolio"
+                />
+                </Link>
               </SwiperSlide>
             </Swiper>
           </div>
