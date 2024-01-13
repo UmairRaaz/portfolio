@@ -122,7 +122,7 @@ const Contact = () => {
               Hit Me Up <FaRocketchat size={20} />
             </button>
             <h1 className="text-gray-100 flex items-center justify-between gap-2">
-              <CgMail size={20} /> umairgopang123@gmail.com.com
+              <CgMail size={20} /> umairgopang123@gmail.com
             </h1>
           </div>
         </form>
