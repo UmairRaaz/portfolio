@@ -5,35 +5,30 @@ import { CgMail } from "react-icons/cg";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 const Contact = () => {
-  const form = useRef();
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [msg, setmsg] = useState("");
-  const serviceID = "service_7czmcta";
 
+  const serviceID = "service_7czmcta";
   const templateID = "template_sxogh74";
   const publicKey = "kcfnsWzYnzolSfFG0";
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
 
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      to_name: "Umair",
-      message: msg,
-    };
+  
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
     const promise = new Promise((resolve, reject) => {
-      emailjs
-        .send(serviceID, templateID, templateParams, publicKey)
-        .then((response) => {
-          console.log("Email sent successfully:", response);
+      emailjs.sendForm(serviceID, templateID, form.current, publicKey)
+        .then((result) => {
+          console.log("Email sent successfully:", result.text);
           setname("");
           setemail("");
           setmsg("");
           resolve("Settings saved!");
         })
         .catch((error) => {
-          console.error("Error sending email:", error);
+          console.error("Error sending email:", error.text);
           reject(new Error("Could not save."));
         });
     });
@@ -62,7 +57,7 @@ const Contact = () => {
         </p>
       </div>
       <div className="md:w-1/2 p-8">
-        <form className="space-y-4" ref={form} onSubmit={handleFormSubmit}>
+        <form className="space-y-4" ref={form} onSubmit={sendEmail}>
           <div>
             <label
               htmlFor="name"
@@ -74,7 +69,7 @@ const Contact = () => {
               type="text"
               id="name"
               required
-              name="name"
+              name="user_name"
               value={name}
               onChange={(e) => setname(e.target.value)}
               className="mt-1 p-2 w-full text-white  bg-[#161a2c] rounded-md focus:outline-none focus:border-indigo-500"
@@ -90,7 +85,7 @@ const Contact = () => {
             <input
               type="email"
               id="email"
-              name="email"
+              name="user_email"
               required
               value={email}
               onChange={(e) => setemail(e.target.value)}
